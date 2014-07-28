@@ -47,11 +47,72 @@ class Admin extends CI_Controller {
         }
         
         if(!empty($session['SID'])) {
-            redirect('/admin/update/who-we-are/', 'refresh');
+            redirect('/admin/update/home/', 'refresh');
         } else {
             $this->load->view('admin/login');
         }
     }
+    
+    public function update($seccion = null) {
+        $session = $this->session->all_userdata();
+        if(empty($session['SID'])) {
+            redirect('/admin/login/', 'refresh');
+        }
+        
+        $idcontenido = array();
+        if($seccion != null) {
+            $idcontenido = $this->admin_model->get_id_contenido($seccion);
+            if(!empty($idcontenido)) {
+                $this->form_validation->set_rules('titulo', 'Titulo', 'required');
+                if($this->form_validation->run() == FALSE) {
+                    
+                } else {
+                    
+                    
+                    $datos = array(
+                        'titulo' => $this->input->post('titulo'),
+                        'texto' => $this->input->post('texto')
+                    );
+                    
+                    
+                    $this->admin_model->update($datos, $idcontenido['idcontenido']);
+                    
+                }
+            }
+        }
+        
+        
+        if($seccion == null) {
+            $left['seccion'] = 'home';
+        } else {
+            $left['seccion'] = $seccion;
+        }
+        
+        if(!empty($idcontenido)) {
+            $datos['contenido'] = $this->admin_model->get_contenido_por_parametros($left['seccion']);
+        } else {
+            $datos['contenido']['titulo'] = '';
+            $datos['contenido']['texto'] = '';
+        }
+        
+        $datos['segmento'] = $this->uri->segment(3);
+        $datos['seccion'] = $left['seccion'];
+        
+        $t = explode('-', $seccion);
+        $titulo = '';
+        foreach ($t as $value) {
+            $titulo .= strtoupper($value).' ';
+        }
+        $datos['titulo'] = $titulo;
+        
+        $this->load->view('layout/header', $datos);
+        $this->load->view('layout/menu');
+        $this->load->view('admin/update');
+        $this->load->view('layout/footer');
+        
+        
+    }
+    
     
     public function logout() {
         $this->session->sess_destroy();

@@ -96,14 +96,17 @@
                         <!-- Brand and Search Section -->
                         <div class="span4 text-center">
                             <!-- Top search -->
+                            <!--
                             <form id="top-search" class="pull-left" action="page_ready_search_results.html" method="post">
                                 <input type="text" id="search-term" name="search-term" placeholder="Search..">
                             </form>
+                            -->
                             <!-- END Top search -->
 
                             <!-- Logo -->
                             <a href="index.html" class="brand">
-                                <img src="/assets/flatapp/img/template/logo.png" alt="logo">
+                                <!--<img src="/assets/flatapp/img/template/logo.png" alt="logo">-->
+                                Krandt
                             </a>
                             <!-- END Logo -->
 
@@ -118,7 +121,7 @@
                             <ul class="nav pull-right">
                                 <!-- Theme Options, functionality initialized at main.js - templateOptions() -->
                                 <li class="dropdown dropdown-theme-options">
-                                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Theme Options</a>
+                                    <!--<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Theme Options</a>-->
                                     <ul class="dropdown-menu">
                                         <!-- Page Options -->
                                         <li class="theme-extra visible-desktop">
@@ -233,7 +236,7 @@
                                 <li class="divider-vertical remove-margin"></li>
 
                                 <!-- Notifications -->
-                                <li class="dropdown dropdown-notifications">
+                                <!--<li class="dropdown dropdown-notifications">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="icon-warning-sign"></i>
                                         <span class="badge badge-neutral">4</span>
@@ -258,11 +261,11 @@
                                             <a href="javascript:void(0)"><i class="icon-warning-sign pull-right"></i>Notification Center</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li>-->
                                 <!-- END Notifications -->
 
                                 <!-- Messages -->
-                                <li class="dropdown dropdown-messages">
+                                <!--<li class="dropdown dropdown-messages">
                                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="icon-envelope-alt"></i>
                                         <span class="badge badge-neutral display-none"></span>
@@ -308,7 +311,7 @@
                                             <a href="page_comp_inbox.html"><i class="icon-envelope-alt pull-right"></i>Message Center</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li>-->
                                 <!-- END Messages -->
                             </ul>
                             <!-- END Header Nav -->

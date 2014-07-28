@@ -11,17 +11,7 @@
                     <!-- Mini Profile -->
                     <div class="mini-profile">
                         <div class="mini-profile-options">
-                            <a href="javascript:void(0)" class="badge badge-info loading-on" data-toggle="tooltip" data-placement="right" title="Refresh">
-                                <i class="icon-refresh"></i>
-                            </a>
-                            <a href="page_ready_shopping_cart.html" class="badge badge-warning" data-toggle="tooltip" data-placement="right" title="6 Products">
-                                <i class="glyphicon-shopping_cart"></i>
-                            </a>
-                            <!-- Modal div is at the bottom of the page before including javascript code, we use .enable-tooltip class for the tooltip because data-toggle is used for modal -->
-                            <a href="#modal-user-account" class="badge badge-success enable-tooltip" role="button" data-toggle="modal" data-placement="right" title="Settings">
-                                <i class="glyphicon-cogwheel"></i>
-                            </a>
-                            <a href="page_login.html" class="badge badge-important" data-toggle="tooltip" data-placement="right" title="Log out">
+                            <a href="/admin/logout/" class="badge badge-important" data-toggle="tooltip" data-placement="right" title="Log out">
                                 <i class="icon-signout"></i>
                             </a>
                         </div>
@@ -47,25 +37,28 @@
                                 <nav id="primary-nav">
                                     <ul>
                                         <li>
-                                            <a href="#" class="active">HOME</a>
+                                            <a href="/admin/update/home/"<?=($segmento=='home')?" class='active'":""?>>HOME</a>
                                         </li>
                                         <li>
-                                            <a href="#">PRODUCTOS</a>
+                                            <a href="/admin/update/productos/"<?=($segmento=='productos')?" class='active'":""?>>PRODUCTOS</a>
                                         </li>
                                         <li>
                                             <a href="#" class="menu-link">CONTROL DE ACCESOS</a>
                                             <ul>
                                                 <li>
-                                                    <a href="#">ACCESO PEATONAL</a>
+                                                    <a href="/admin/update/control-de-accesos/"<?=($segmento=='control-de-accesos')?" class='active'":""?>>CONTROL DE ACCESOS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">ESTACIONAMIENTO</a>
+                                                    <a href="/admin/update/acceso-peatonal/"<?=($segmento=='acceso-peatonal')?" class='active'":""?>>ACCESO PEATONAL</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">ACCESO VEHICULAR</a>
+                                                    <a href="/admin/update/estacionamiento/"<?=($segmento=='estacionamiento')?" class='active'":""?>>ESTACIONAMIENTO</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">BASE DE DATOS</a>
+                                                    <a href="/admin/update/acceso-vehicular/"<?=($segmento=='acceso-vehicular')?" class='active'":""?>>ACCESO VEHICULAR</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/admin/update/base-de-datos/"<?=($segmento=='base-de-datos')?" class='active'":""?>>BASE DE DATOS</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -73,34 +66,37 @@
                                             <a href="#" class="menu-link">TIEMPO Y ASISTENCIA</a>
                                             <ul>
                                                 <li>
-                                                    <a href="#">ADMIN. DESCENTRALIZADA</a>
+                                                    <a href="/admin/update/tiempo-y-asistencia/"<?=($segmento=='tiempo-y-asistencia')?" class='active'":""?>>TIEMPO Y ASISTENCIA</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">USUARIOS ADMINISTRADORES</a>
+                                                    <a href="/admin/update/admin-descentralizada/"<?=($segmento=='admin-descentralizada')?" class='active'":""?>>ADMIN. DESCENTRALIZADA</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">RECEPCION DE FICHADAS</a>
+                                                    <a href="/admin/update/usuarios-administradores/"<?=($segmento=='usuarios-administradores')?" class='active'":""?>>USUARIOS ADMINISTRADORES</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">TURNOS Y ROTACIONES</a>
+                                                    <a href="/admin/update/recepcion-de-fichadas/"<?=($segmento=='recepcion-de-fichadas')?" class='active'":""?>>RECEPCION DE FICHADAS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">PROCESAMIENTO DE FICHADAS</a>
+                                                    <a href="/admin/update/turnos-y-rotaciones/"<?=($segmento=='turnos-y-rotaciones')?" class='active'":""?>>TURNOS Y ROTACIONES</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">HORAS EXTRAS</a>
+                                                    <a href="/admin/update/procesamiento-de-fichadas/"<?=($segmento=='procesamiento-de-fichadas')?" class='active'":""?>>PROCESAMIENTO DE FICHADAS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">CALCULO DE HORAS</a>
+                                                    <a href="/admin/update/horas-extras/"<?=($segmento=='horas-extras')?" class='active'":""?>>HORAS EXTRAS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">ADMINISTRACION DE NOVEDADES</a>
+                                                    <a href="/admin/update/calculo-de-horas/"<?=($segmento=='calculo-de-horas')?" class='active'":""?>>CALCULO DE HORAS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">LIQUIDACION DE SUELDOS</a>
+                                                    <a href="/admin/update/administracion-de-novedades/"<?=($segmento=='administracion-de-novedades')?" class='active'":""?>>ADMINISTRACION DE NOVEDADES</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">OTRAS CARACTERISTICAS</a>
+                                                    <a href="/admin/update/liquidacion-de-sueldos/"<?=($segmento=='liquidacion-de-sueldos')?" class='active'":""?>>LIQUIDACION DE SUELDOS</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/admin/update/otras-caracteristicas/"<?=($segmento=='otras-caracteristicas')?" class='active'":""?>>OTRAS CARACTERISTICAS</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -108,28 +104,31 @@
                                             <a href="#" class="menu-link">VISITAS</a>
                                             <ul>
                                                 <li>
-                                                    <a href="#">CONCEPTO</a>
+                                                    <a href="/admin/update/visitas/"<?=($segmento=='visitas')?" class='active'":""?>>VISITAS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">CARACTERISTICAS</a>
+                                                    <a href="/admin/update/concepto/"<?=($segmento=='concepto')?" class='active'":""?>>CONCEPTO</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">REGISTRACION</a>
+                                                    <a href="/admin/update/caracteristicas/"<?=($segmento=='caracteristicas')?" class='active'":""?>>CARACTERISTICAS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">CATEGORIA DE VISITANTE</a>
+                                                    <a href="/admin/update/registracion/"<?=($segmento=='registracion')?" class='active'":""?>>REGISTRACION</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">PRE-AUTORIZACION</a>
+                                                    <a href="/admin/update/categoria-de-visitante/"<?=($segmento=='categoria-de-visitante')?" class='active'":""?>>CATEGORIA DE VISITANTE</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">INGRESO</a>
+                                                    <a href="/admin/update/pre-autorizacion/"<?=($segmento=='pre-autorizacion')?" class='active'":""?>>PRE-AUTORIZACION</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">OBJETOS</a>
+                                                    <a href="/admin/update/ingreso/"<?=($segmento=='ingreso')?" class='active'":""?>>INGRESO</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">REPORTES</a>
+                                                    <a href="/admin/update/objetos/"<?=($segmento=='objetos')?" class='active'":""?>>OBJETOS</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/admin/update/reportes/"<?=($segmento=='reportes')?" class='active'":""?>>REPORTES</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -137,33 +136,36 @@
                                             <a href="#" class="menu-link">COMEDOR</a>
                                             <ul>
                                                 <li>
-                                                    <a href="#">USUARIOS</a>
+                                                    <a href="/admin/update/comedor/"<?=($segmento=='comedor')?" class='active'":""?>>COMEDOR</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">MENUS</a>
+                                                    <a href="/admin/update/usuarios/"<?=($segmento=='usuarios')?" class='active'":""?>>USUARIOS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">CONVENIOS</a>
+                                                    <a href="/admin/update/menus/"<?=($segmento=='menus')?" class='active'":""?>>MENUS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">HABILITACION DE CONSUMO</a>
+                                                    <a href="/admin/update/convenios/"<?=($segmento=='convenios')?" class='active'":""?>>CONVENIOS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">FICHADAS DE CONSUMO</a>
+                                                    <a href="/admin/update/habilitacion-de-consumo/"<?=($segmento=='habilitacion-de-consumo')?" class='active'":""?>>HABILITACION DE CONSUMO</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">ALTA MANUAL DE CONSUMOS</a>
+                                                    <a href="/admin/update/fichadas-de-consumo/"<?=($segmento=='fichadas-de-consumo')?" class='active'":""?>>FICHADAS DE CONSUMO</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">LIQUIDACION DE SUELDOS</a>
+                                                    <a href="/admin/update/alta-manual-de-consumos/"<?=($segmento=='alta-manual-de-consumos')?" class='active'":""?>>ALTA MANUAL DE CONSUMOS</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">OTRAS CARACTERISTICAS</a>
+                                                    <a href="/admin/update/liquidacion-sueldos/"<?=($segmento=='liquidacion-sueldos')?" class='active'":""?>>LIQUIDACION DE SUELDOS</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/admin/update/otras--caracteristicas/"<?=($segmento=='otras--caracteristicas')?" class='active'":""?>>OTRAS CARACTERISTICAS</a>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#">VIDEO IP</a>
+                                            <a href="/admin/update/video-ip/"<?=($segmento=='video-ip')?" class='active'":""?>>VIDEO IP</a>
                                         </li>
                                         
                                     </ul>
