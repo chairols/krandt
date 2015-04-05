@@ -8,7 +8,8 @@ class Admin extends CI_Controller {
             'session'
         ));
         $this->load->model(array(
-            'admin_model'
+            'admin_model',
+            'usuarios_model'
         ));
         $this->load->helper(array(
             'url'
@@ -47,7 +48,7 @@ class Admin extends CI_Controller {
         }
         
         if(!empty($session['SID'])) {
-            redirect('/admin/update/home/', 'refresh');
+            redirect('/admin/update/historia/', 'refresh');
         } else {
             $this->load->view('admin/login');
         }
@@ -113,6 +114,42 @@ class Admin extends CI_Controller {
         
     }
     
+    public function usuarios() {
+        $session = $this->session->all_userdata();
+        if(empty($session['SID'])) {
+            redirect('/admin/login/', 'refresh');
+        }
+        $left['seccion'] = 'usuarios';
+        $data['segmento'] = $this->uri->segment(2);
+        $data['seccion'] = $left['seccion'];
+        $data['contenido']['titulo'] = 'USUARIOS';
+        
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+        $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        
+        if($this->form_validation->run() == FALSE) {
+            
+        } else {
+            $datos = array(
+                'password' => $this->input->post('password'),
+                'nombre' => $this->input->post('nombre'),
+                'apellido' => $this->input->post('apellido'),
+                'empresa' => $this->input->post('empresa'),
+                'email' => $this->input->post('email'),
+                'categoria' => $this->input->post('categoria'),
+                'idtipodeusuario' => '2'
+            );
+            
+            $this->usuarios_model->set($datos);
+        }
+        
+        $this->load->view('layout/header', $left);
+        $this->load->view('layout/menu', $data);
+        $this->load->view('admin/usuarios');
+        $this->load->view('layout/footer');
+    }
     
     public function logout() {
         $this->session->sess_destroy();
