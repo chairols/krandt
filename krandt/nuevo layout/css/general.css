@@ -1,0 +1,246 @@
+@charset "utf-8";
+body {
+	background-color: #E5E5E5;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding-left: auto;
+}
+.contenido {
+	width: 925px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFFFFF;
+}
+.header {
+	width: 925px;
+	height: 100px;
+	background-image: url(../imagenes/fondoheader.jpg);
+	background-repeat: repeat-x;
+}
+.logo {
+	width: 170px;
+	height: 80px;
+	float: left;
+}
+.footer {
+	width: 925px;
+	height: 60px;
+	float: left;
+	background-image: url(../imagenes/footer.jpg);
+	background-repeat: repeat-x;
+	padding-top: 15px;
+	color: #FFFFFF;
+}
+
+.texto1footer {
+	color: #FFFFFF;
+	width: 300px;
+	height: 35px;
+	padding-left: 35px;
+	font-size: 11px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	float: left;
+}
+.texto2footer {
+	color: #D4D4D4;
+	width: 200px;
+	height: 35px;
+	padding-left: 35px;
+	font-size: 11px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	float: right;
+}
+.menu1 {
+	width: 75px;
+	height: 44px;
+	float: left;
+	background-image: url(../imagenes/fondomenu1.jpg);
+	padding-left: 5px;
+	padding-top: 3px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
+
+}
+.menu2 {
+	width: 84px;
+	height: 44px;
+	float: left;
+	background-image: url(../imagenes/fondomenu1.jpg);
+	padding-left: 5px;
+	padding-top: 3px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
+
+}
+.menu3 {
+	width: 94px;
+	height: 44px;
+	float: left;
+	background-image: url(../imagenes/fondomenu1.jpg);
+	padding-left: 5px;
+	padding-top: 3px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
+
+}
+.menu4 {
+	width: 85px;
+	height: 44px;
+	float: left;
+	background-image: url(../imagenes/fondomenu1.jpg);
+	padding-left: 5px;
+	padding-top: 3px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
+
+}
+.menu5 {
+	width: 107px;
+	height: 44px;
+	float: left;
+	background-image: url(../imagenes/fondomenu1.jpg);
+	padding-left: 5px;
+	padding-top: 3px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
+
+}
+.menu6 {
+	width: 83px;
+	height: 44px;
+	float: left;
+	background-image: url(../imagenes/fondomenu1.jpg);
+	padding-left: 5px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-align: center;
+	padding-top: 3px;
+}
+.contenedormenu {
+	width: 600px;
+	float: left;
+	padding-left: 132px;
+	z-index: auto;
+	margin-top: 22px;
+}
+.enviar {
+	background-color: #000000;
+	width: 130px;
+	height: 35px;
+	color: #FFFFFF;
+}
+.campos {
+	width: 400px;
+	height: 30px;
+	background-color: #E4E5E6;
+	border-width: 0px 0px 0px 3px;
+	border-left-color: #000142;
+}
+.campos2 {
+	width: 400px;
+	background-color: #E4E5E6;
+	border-width: 0px 0px 0px 3px;
+	border-left-color: #000142;
+}
+.contenidoproductos {
+	width: 925px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #F4F4F3;
+}
+.productos1 {
+	width: 400px;
+	margin-top: 35px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	color: #646363;
+}
+.productos2 {
+	width: 400px;
+	float: right;
+	margin-top: 35px;
+	margin-left: 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	color: #646363;
+	margin-right: 15px;
+}
+.tituloproductos {
+	width: 100%;
+	height: 20px;
+	background-color: #193066;
+	color: #FFFFFF;
+	font-size: 13px;
+	padding-left: 10px;
+	margin-bottom: 15px;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 2px;
+}
+.columnaproductos1 {
+	width: 400px;
+	height: 2000px;
+	float: left;
+}
+.columnaproductos2 {
+	width: 400px;
+	height: 2000px;
+	float: right;
+}
+.columnaproductosvideoip {
+	width: 400px;
+	height: 700px;
+	float: right;
+}
+.columnavideoip1 {
+	width: 400px;
+	height: 400px;
+	float: left;
+}
+.columnavideoip2 {
+	width: 400px;
+	height: 400px;
+	float: right;
+}
+.columnacomedor1 {
+	width: 400px;
+	height: 1250px;
+	float: left;
+}
+.columnacomedor2 {
+	width: 400px;
+	height: 1250px;
+	float: right;
+}
+.columnacontrol1 {
+	width: 400px;
+	height: 900px;
+	float: left;
+}
+.columnacontrol2 {
+	width: 400px;
+	height: 900px;
+	float: right;
+}
+.ingresar {
+	width: 150px;
+	float: right;
+	margin-top: 18px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	color: #646363;
+
+}

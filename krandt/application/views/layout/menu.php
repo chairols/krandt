@@ -40,10 +40,10 @@
                                             <a href="/admin/update/home/"<?=($segmento=='home')?" class='active'":""?>>HOME</a>
                                         </li>
                                         <li>
-                                            <a href="/admin/update/productos/"<?=($segmento=='productos')?" class='active'":""?>>PRODUCTOS</a>
+                                            <a href="/admin/update/historia/"<?=($segmento=='historia')?" class='active'":""?>>HISTORIA</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="menu-link">CONTROL DE ACCESOS</a>
+                                            <a href="#" class="menu-link">PRODUCTOS</a>
                                             <ul>
                                                 <li>
                                                     <a href="/admin/update/control-de-accesos/"<?=($segmento=='control-de-accesos')?" class='active'":""?>>CONTROL DE ACCESOS</a>

@@ -38,8 +38,11 @@
 |
 */
 
-$route['default_controller'] = "admin/login";
+$route['default_controller'] = "home";
 $route['404_override'] = '';
+$route['control-de-accesos'] = 'control_de_accesos/index';
+$route['tiempo-y-asistencia'] = 'tiempo_y_asistencia/index';
+$route['video-ip'] = 'video_ip/index';
 
 
 /* End of file routes.php */

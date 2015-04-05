@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<defs>
+<font id="icon-food" horiz-adv-x="1000" >
+<font-face font-family="icon-food" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="videocam" unicode="&#xe800;" d="m0 100l0 500q0 39 27 66t67 28l594 0q39 0 66-28t27-66l0-39 84 84q20 17 45 17l27 0q26 0 44-18t19-44l0-500q0-27-19-45t-44-17l-27 0q-25 0-45 17l-84 84 0-39q0-39-27-66t-66-28l-594 0q-39 0-67 28t-27 66z m63 0q0-14 8-22t23-9l594 0q13 0 22 9t9 22l0 500q0 14-9 22t-22 9l-594 0q-14 0-23-9t-8-22l0-500z m687 156l31-31 125-125 31 0 0 500-31 0-156-156 0-188z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
