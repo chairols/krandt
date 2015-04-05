@@ -20,7 +20,9 @@ class Visitas extends CI_Controller {
         $data['objetos'] = $this->admin_model->get_contenido_por_parametros('objetos');
         $data['reportes'] = $this->admin_model->get_contenido_por_parametros('reportes');
         
+        $this->load->view('frontend/header');
         $this->load->view('visitas/index', $data);
+        $this->load->view('frontend/footer');
     }
 }
 ?>

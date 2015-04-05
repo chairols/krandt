@@ -25,16 +25,16 @@
 		</script>
 	<![endif]-->
 </head>
-<div class="contenido">
+<div class="contenidoproductos">
 <div class="header">
     <div class="logo"><a href="/home/"><img src="/assets/sitio/imagenes/logo.png" width="177" height="90" alt=""/></a></div>
-    <div class="ingresar"><a href="/downloads/"><img src="/assets/sitio/imagenes/iconoingresar.jpg" width="66" height="21" alt=""/ border="0"></a></div>
+    <div class="ingresar"><a href="/downloads/"><img src="/assets/sitio/imagenes/iconoingresar.jpg" width="66" height="21" alt="" border="0"></a></div>
 <div class="contenedormenu">
 <ul class="menu sgray fade" id="menu">
 	
     <li><a href="/home/">HOME</a></li>
-	<li class="hover"><a href="/historia/">HISTORIA</a></li>
-	<li><a href="#">PRODUCTOS</a>
+	<li><a href="/historia/">HISTORIA</a></li>
+	<li class="hover"><a href="#">PRODUCTOS</a>
 		<!-- start level 2 -->
 		<ul>
 			<li><a href="/control-de-accesos/">Control de accesos</a></li>
@@ -56,15 +56,3 @@
 </ul>
 </div>
 </div>
-<?=$historia['texto']?>
-
-<div class="footer">
-  <div class="texto1footer">Thames 2192 3 Piso, (1425), Buenos Aires, Argentina<br>
-    Tel.: (+54 11) 5218 - 7809</div>
-  <div class="texto2footer">Copyright 2015 Krandt S.A.<br>
-    Design by B.on Comunicacion </div>
-</div>
-</div>
-
-</body>
-</html>

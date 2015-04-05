@@ -22,7 +22,9 @@ class Tiempo_y_asistencia extends CI_Controller {
         $data['liquidacion_de_sueldos'] = $this->admin_model->get_contenido_por_parametros('liquidacion-de-sueldos');
         $data['otras_caracteristicas'] = $this->admin_model->get_contenido_por_parametros('otras-caracteristicas');
         
+        $this->load->view('frontend/header');
         $this->load->view('tiempo_y_asistencia/index', $data);
+        $this->load->view('frontend/footer');
     }
 }
 ?>

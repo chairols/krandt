@@ -15,7 +15,9 @@ class Control_de_accesos extends CI_Controller {
         $data['acceso_vehicular'] = $this->admin_model->get_contenido_por_parametros('acceso-vehicular');
         $data['base_de_datos'] = $this->admin_model->get_contenido_por_parametros('base-de-datos');
         
+        $this->load->view('frontend/header');
         $this->load->view('control_de_accesos/index', $data);
+        $this->load->view('frontend/footer');
     }
 }
 ?>

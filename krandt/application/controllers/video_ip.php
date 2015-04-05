@@ -12,7 +12,9 @@ class Video_ip extends CI_Controller {
     public function index() {
         $data['video_ip'] = $this->admin_model->get_contenido_por_parametros('video-ip');
         
+        $this->load->view('frontend/header');
         $this->load->view('video_ip/index', $data);
+        $this->load->view('frontend/footer');
     }
 }
 ?>

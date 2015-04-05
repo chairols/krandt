@@ -20,7 +20,9 @@ class Comedor extends CI_Controller {
         $data['liquidacion_sueldos'] = $this->admin_model->get_contenido_por_parametros('liquidacion-sueldos');
         $data['otras_caracteristicas'] = $this->admin_model->get_contenido_por_parametros('otras--caracteristicas');
         
+        $this->load->view('frontend/header');
         $this->load->view('comedor/index', $data);
+        $this->load->view('frontend/footer');
     }
 }
 ?>
