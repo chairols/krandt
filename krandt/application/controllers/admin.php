@@ -9,7 +9,8 @@ class Admin extends CI_Controller {
         ));
         $this->load->model(array(
             'admin_model',
-            'usuarios_model'
+            'usuarios_model',
+            'archivos_model'
         ));
         $this->load->helper(array(
             'url'
@@ -145,6 +146,8 @@ class Admin extends CI_Controller {
             $this->usuarios_model->set($datos);
         }
         
+        $data['usuarios'] = $this->usuarios_model->gets();
+        
         $this->load->view('layout/header', $left);
         $this->load->view('layout/menu', $data);
         $this->load->view('admin/usuarios');
@@ -155,5 +158,99 @@ class Admin extends CI_Controller {
         $this->session->sess_destroy();
         redirect('/admin/login/', 'refresh');
     } 
+    
+    public function archivos() {
+        $session = $this->session->all_userdata();
+        if(empty($session['SID'])) {
+            redirect('/admin/login/', 'refresh');
+        }
+        $left['seccion'] = 'usuarios';
+        $data['segmento'] = $this->uri->segment(2);
+        $data['seccion'] = $left['seccion'];
+        $data['contenido']['titulo'] = 'ARCHIVOS';
+        
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+        
+        if($this->form_validation->run() == FALSE) {
+            
+        } else {
+            $config['upload_path'] = "./upload/";
+            $config['allowed_types'] = "*";
+            $config['max_size'] = "2048";
+            $config['encrypt_name'] = true;
+            $config['remove_spaces'] = true;
+            
+            $this->load->library('upload', $config);
+            
+            if(!$this->upload->do_upload('archivo')) {
+                $error = array('error' => $this->upload->display_errors());
+                echo "<br><br><br>";
+                var_dump($error);
+            } else {
+                $data = array('upload_data' => $this->upload->data());
+                
+                $datos = array(
+                    'archivo' => $data['upload_data']['file_name'],
+                    'idcategoria' => $this->input->post('categoria'),
+                    'nombre' => $this->input->post('nombre')
+                );
+                
+                $this->archivos_model->set($datos);
+
+                redirect('/admin/archivos/', 'refresh');
+            }
+            
+            
+        }
+        
+        $data['archivos'] = $this->archivos_model->gets();
+        
+        $this->load->view('layout/header', $left);
+        $this->load->view('layout/menu', $data);
+        $this->load->view('admin/archivos');
+        $this->load->view('layout/footer');
+    }
+    
+    public function editar_usuario($idusuario = null) {
+        $session = $this->session->all_userdata();
+        if(empty($session['SID'])) {
+            redirect('/admin/login/', 'refresh');
+        }
+        if($idusuario == null) {
+            redirect('/admin/usuarios/', 'refresh');
+        }
+        $left['seccion'] = 'usuarios';
+        $data['segmento'] = $this->uri->segment(2);
+        $data['seccion'] = $left['seccion'];
+        $data['contenido']['titulo'] = 'USUARIOS';
+        
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+        $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        
+        if($this->form_validation->run() == FALSE) {
+            
+        } else {
+            $datos = array(
+                'nombre' => $this->input->post('nombre'),
+                'apellido' => $this->input->post('apellido'),
+                'empresa' => $this->input->post('empresa'),
+                'email' => $this->input->post('email'),
+                'categoria' => $this->input->post('categoria')
+            );
+            if($this->input->post('password') != '') {
+                $datos['password'] = $this->input->post('password');
+            }
+            
+            $this->usuarios_model->update($datos, $idusuario);
+        }
+        
+        $data['usuario'] = $this->usuarios_model->get_where(array('idusuario' => $idusuario));
+        
+        $this->load->view('layout/header', $left);
+        $this->load->view('layout/menu', $data);
+        $this->load->view('admin/editar_usuario');
+        $this->load->view('layout/footer');
+    }
 }
 ?>

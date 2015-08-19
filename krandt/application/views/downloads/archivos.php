@@ -6,13 +6,13 @@
         <link href="/assets/sitio/css/general.css" rel="stylesheet" type="text/css">
         <link href="/assets/sitio/css/home.css" rel="stylesheet" type="text/css">
         <link href="/assets/sitio/css/contenido.css" rel="stylesheet" type="text/css">
-
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="/assets/sitio/css/menu/core.css" type="text/css" media="screen">
 <link rel="stylesheet" href="/assets/sitio/css/menu/styles/sgray.css" type="text/css" media="screen">
 	<!--[if (gt IE 9)|!(IE)]><!-->
         <link rel="stylesheet" href="/assets/sitio/css/menu/effects/fade.css" type="text/css" media="screen">
-        <link href="/assets/sitio/css/downloads.css" rel="stylesheet" type="text/css">
+        <link href="/assets/sitio/css/historia.css" rel="stylesheet" type="text/css">
+        <link href="/assets/sitio/css/clientes.css" rel="stylesheet" type="text/css">
 	<!--<![endif]-->
 
 	<!-- This piece of code, makes the CSS3 effects available for IE -->
@@ -29,7 +29,7 @@
 <div class="contenido">
 <div class="header">
     <div class="logo"><a href="/home/"><img src="/assets/sitio/imagenes/logo.png" width="177" height="90" alt=""/></a></div>
-    <div class="ingresar"><a href="/downloads/"><img src="/assets/sitio/imagenes/iconoingresar.jpg" width="66" height="21" alt="" border="0"></a></div>
+    <div class="ingresar"><?=$session['nombre']?> <?=$session['apellido']?> <a href="/downloads/logout/">(Salir)</a></div>
 <div class="contenedormenu">
 <ul class="menu sgray fade" id="menu">
 	
@@ -57,23 +57,13 @@
 </ul>
 </div>
 </div>
-<div class="contenedorhistoria">
-  <div class="login">
-    <p><strong>LOGIN</strong></p>
-    <p>Por favor ingrese sus datos</p>
-    <form method="POST">
-    <p>
-        <input name="usuario" type="text" class="campos" id="textfield" placeholder="  Usuario" size="45" maxlength="200" autofocus>
-    </p>
-    <p>
-        <input name="password" type="password" class="campos" id="textfield2" placeholder="  Contraseña" size="45">
-    </p>
-    <p>
-        <input name="button" type="submit" class="enviar" id="button" value="Ingresar">
-    </p>
-    </form>
+<div class="contenedorclientes">
+    <br><br>
+    <?php foreach($archivos as $archivo) { ?>
+    <div class="span12" style="text-align: center;"><a href="/upload/<?=$archivo['archivo']?>"><?=$archivo['nombre']?></a></div>
+    <?php } ?>
+
   </div>
-</div>
 
 <div class="footer">
   <div class="texto1footer">Thames 2192 3 Piso, (1425), Buenos Aires, Argentina<br>

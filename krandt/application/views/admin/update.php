@@ -1,5 +1,6 @@
+<title>Krandt | Administrador</title>
 <div id="pre-page-content">
-    <h1><i class="glyphicon-edit themed-color"></i> <?=$segmento?><br><small><?=$contenido['titulo']?></small></h1>
+  <h1><i class="glyphicon-edit themed-color"></i> <?=$segmento?><br><small><?=$contenido['titulo']?></small></h1>
 </div>
 <div id="page-content">
     <form method="post">

@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>FlatApp - Premium, Responsive and Flat Bootstrap Admin Dashboard Template</title>
+        <title>Krandt | Administrador</title>
 
         <meta name="description" content="FlatApp is a Premium, Responsive and Flat Bootstrap Admin Dashboard Template created by pixelcave and published on Themeforest.">
         <meta name="author" content="pixelcave">
