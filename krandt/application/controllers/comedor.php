@@ -7,6 +7,9 @@ class Comedor extends CI_Controller {
         $this->load->model(array(
             'admin_model'
         ));
+        $this->load->library(array(
+            'session'
+        ));
     }
     
     public function index() {
@@ -19,9 +22,10 @@ class Comedor extends CI_Controller {
         $data['alta_manual_de_consumos'] = $this->admin_model->get_contenido_por_parametros('alta-manual-de-consumos');
         $data['liquidacion_sueldos'] = $this->admin_model->get_contenido_por_parametros('liquidacion-sueldos');
         $data['otras_caracteristicas'] = $this->admin_model->get_contenido_por_parametros('otras--caracteristicas');
+        $data['session'] = $this->session->all_userdata();
         
-        $this->load->view('frontend/header');
-        $this->load->view('comedor/index', $data);
+        $this->load->view('frontend/header', $data);
+        $this->load->view('comedor/index');
         $this->load->view('frontend/footer');
     }
 }

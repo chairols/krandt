@@ -243,6 +243,8 @@ class Admin extends CI_Controller {
             }
             
             $this->usuarios_model->update($datos, $idusuario);
+            
+            redirect('/admin/usuarios/', 'refresh');
         }
         
         $data['usuario'] = $this->usuarios_model->get_where(array('idusuario' => $idusuario));
@@ -251,6 +253,20 @@ class Admin extends CI_Controller {
         $this->load->view('layout/menu', $data);
         $this->load->view('admin/editar_usuario');
         $this->load->view('layout/footer');
+    }
+    
+    public function borrar_usuario($idusuario) {
+        $session = $this->session->all_userdata();
+        if(empty($session['SID'])) {
+            redirect('/admin/login/', 'refresh');
+        }
+        if($idusuario == null) {
+            redirect('/admin/usuarios/', 'refresh');
+        }
+        
+        $this->usuarios_model->borrar($idusuario);
+        
+        redirect('/admin/usuarios/', 'refresh');
     }
 }
 ?>

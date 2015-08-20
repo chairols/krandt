@@ -7,6 +7,9 @@ class Tiempo_y_asistencia extends CI_Controller {
         $this->load->model(array(
             'admin_model'
         ));
+        $this->load->library(array(
+            'session'
+        ));
     }
     
     public function index() {
@@ -21,9 +24,10 @@ class Tiempo_y_asistencia extends CI_Controller {
         $data['administracion_de_novedades'] = $this->admin_model->get_contenido_por_parametros('administracion-de-novedades');
         $data['liquidacion_de_sueldos'] = $this->admin_model->get_contenido_por_parametros('liquidacion-de-sueldos');
         $data['otras_caracteristicas'] = $this->admin_model->get_contenido_por_parametros('otras-caracteristicas');
+        $data['session'] = $this->session->all_userdata();
         
-        $this->load->view('frontend/header');
-        $this->load->view('tiempo_y_asistencia/index', $data);
+        $this->load->view('frontend/header', $data);
+        $this->load->view('tiempo_y_asistencia/index');
         $this->load->view('frontend/footer');
     }
 }

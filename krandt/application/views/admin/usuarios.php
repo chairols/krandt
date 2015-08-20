@@ -48,6 +48,7 @@
                 <th class="span1 text-center">Email</th>
                 <th class="span1 text-center">Categoria</th>
                 <th class="span1 text-center">&nbsp;</th> 
+                <th class="span1 text-center">&nbsp;</th>
             </tr>
         </thead>
         <tbody>
@@ -59,6 +60,7 @@
                 <td class="span1 text-center"><?=$usuario['email']?></td>
                 <td class="span1 text-center"><?=$usuario['seccion']?></td>
                 <td class="span1 text-center"><a href="/admin/editar_usuario/<?=$usuario['idusuario']?>/">Editar</a></td>
+                <td class="span1 text-center"><a href="/admin/borrar_usuario/<?=$usuario['idusuario']?>/">Borrar</a></td>
             </tr>
             <?php } ?>
         </tbody>

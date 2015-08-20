@@ -7,6 +7,9 @@ class Visitas extends CI_Controller {
         $this->load->model(array(
             'admin_model'
         ));
+        $this->load->library(array(
+            'session'
+        ));
     }
     
     public function index() {
@@ -19,9 +22,10 @@ class Visitas extends CI_Controller {
         $data['ingreso'] = $this->admin_model->get_contenido_por_parametros('ingreso');
         $data['objetos'] = $this->admin_model->get_contenido_por_parametros('objetos');
         $data['reportes'] = $this->admin_model->get_contenido_por_parametros('reportes');
+        $data['session'] = $this->session->all_userdata();
         
-        $this->load->view('frontend/header');
-        $this->load->view('visitas/index', $data);
+        $this->load->view('frontend/header', $data);
+        $this->load->view('visitas/index');
         $this->load->view('frontend/footer');
     }
 }

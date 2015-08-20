@@ -29,7 +29,13 @@
 <div class="contenido">
 <div class="header">
     <div class="logo"><a href="/home/"><img src="/assets/sitio/imagenes/logo.png" width="177" height="90" alt=""/></a></div>
-    <div class="ingresar"><a href="/downloads/"><img src="/assets/sitio/imagenes/iconoingresar.jpg" width="66" height="21" alt="" border="0"></a></div>
+    <div class="ingresar">
+        <?php if(isset($session['SID'])) { ?>
+            <?=$session['nombre']?> <?=$session['apellido']?> <a href="/downloads/logout/">(Salir)</a>
+        <?php } else { ?>
+            <a href="/downloads/"><img src="/assets/sitio/imagenes/iconoingresar.jpg" width="66" height="21" alt="" border="0"></a>
+        <?php } ?>
+    </div>
 <div class="contenedormenu">
 <ul class="menu sgray fade" id="menu">
 	

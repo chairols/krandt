@@ -18,6 +18,9 @@ class Downloads extends CI_Controller {
     
     public function index() {
         $session = $this->session->all_userdata();
+        if(isset($session['SID'])) {
+            redirect('/downloads/archivos/', 'refresh');
+        }
         
         $this->form_validation->set_rules('usuario', 'Usuario', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
@@ -62,7 +65,7 @@ class Downloads extends CI_Controller {
     
     public function logout() {
         $this->session->sess_destroy();
-        redirect('/downloads/', 'refresh');
+        redirect('/home/', 'refresh');
     } 
 }
 
